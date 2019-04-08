@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+	<title>Facebook video downloader</title>
+	<!-- Change these meta tags according to your description and keywords -->
+	<meta name="Description" content="Download your facebook video by just video url, you can download video in HD or SD format">
+	<meta name="Keywords" content="Facebook video, Download video, Download Facbook video">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Latest compiled and minified font awesome CSS -->
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <!-- custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/custom.css">  
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <!-- container-fluid -->
+    <div class="container-fluid">
+      <!-- navbar-header -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="https://www.techdailymag.com/">Fb Video Downloader</a>
+      </div>
+      <!-- navbar-header end. -->
+      <!-- navbar-collapse -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <!-- navbar-nav -->      
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Trigger the modal with a button -->
+          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">Issue</a></li>
+		  <li><a href="https://www.techdailymag.com/privacypolicy">Privacy</a></li>
+          <li><a href="https://www.techdailymag.com/TermsOfUse" target="_blank">Terms Of Use</a></li>
+		   <li><a href="https://www.techdailymag.com/About" target="_blank">About</a></li>
+			<li><a href="https://www.techdailymag.com/Contact" target="_blank">Contact us</a></li>
+
+          <li><p class="navbar-text">Follow us</p></li>                  
+          <li><a href="#" class="fa fa-facebook"></a></li>
+          <li><a href="#" class="fa fa-twitter"></a></li>
+          <li><a href="#" class="fa fa-google"></a></li>
+          <li><a href="#" class="fa fa-linkedin"></a></li>
+          <li><a href="#" class="fa fa-youtube-play"></a></li>
+        </ul>
+        <!-- navbar-nav end. -->
+      </div>
+      <!-- navbar-collapse end. -->
+    </div>
+    <!-- container-fluid end. -->
+  </nav>
+  <!-- nvabar end. -->
+
+  <!-- container-fluid -->
+  <div class="container-fluid">
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-8 col-md-offset-2">
+        <!-- header -->
+        <div class="header text-center">
+          <h1>Fb Video Downloader</h1>
+          <h2>Just enter your video URL to download</h2>
+        </div>
+        <!-- header end. -->
+      </div>
+      <!-- col end. -->          
+    </div>
+    <!-- row end.--> 
+
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-8 col-md-offset-2">
+        <!-- card -->
+        <div class="card">
+          <!-- body -->
+          <div class="body">
+            <!-- row -->
+            <div class="row" >
+              <!-- col -->
+              <div class="col-md-9">         
+                  <input id="url" class="form-control" type="text" placeholder="Please enter the facebook URL to download">                  
+              </div>
+              <div class="col-md-3"> 
+                  <button id="videodownload" class="btn btn-block btn-color" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing">Download</button>             
+              </div>
+              <!-- col end. -->
+            </div>
+            <!-- row end.-->
+          </div>
+          <!-- body end. -->
+        </div>
+        <!-- card end. --> 
+      </div>
+      <!-- col end.--> 
+    </div>
+    <!-- row end.-->
+
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
+        <!-- advertisement -->
+        <div class="advertisement card">
+          <p>Google Advertisement</p>
+        </div>
+        <!-- advertisement end. -->
+      </div>
+      <!-- col end.-->
+    </div>
+    <!-- row end.--> 
+
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-8 col-md-offset-2">
+        <!-- result -->
+        <div class="result">
+          <!-- card -->
+          <div class="card">
+            <!-- body -->
+            <div class="body">
+              <!-- row -->
+              <div class="row">
+                <!-- col -->
+                <div class="col-md-6">
+                  <!-- video -->
+                  <video id="video" height="240" autoplay="autoplay" loop="loop" muted="muted" controls>
+                    <source src="movie.mp4" type="video/mp4" >
+                    Your browser does not support the video tag.
+                  </video>
+                  <!-- video end.-->
+                </div>
+                <div class="col-md-6">
+                  <h4 id="title"></h4>                    
+                  <h5 id="source"></h5>
+                  <!-- form-group -->
+                  <div class="form-group">
+                    <div id="sd"></div>             
+                  </div>
+                  <div class="form-group">
+                    <div id="hd"></div>             
+                  </div>
+                  <!-- form-group end. -->                 
+                </div>
+                <!-- col end. -->
+              </div>
+              <!-- row -->
+            </div>
+            <!-- body end. -->
+          </div>
+          <!-- card end. -->
+        </div>
+        <!-- result end. -->
+      </div>
+      <!-- col end. -->
+    </div>
+    <!-- row end.-->
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Frequent Issue</h4>
+          </div>
+          <div class="modal-body">
+            <h4> URLs look like this: (file: and ftp: URLs are synonymous.)</h4>
+            <ul>
+              <li>https://www.facebook.com/rapidminer/videos/642000499331862/</li>              
+              <li>https://www.facebook.com/beyounick182/videos/1960700404198396/</li>           
+            </ul>
+            <h4> If download link is not working</h4>
+            <ul>
+              <li>Click on any link(Download SD/Download HD) for download.</li>              
+              <li>Right click on the video and click on <b>Save Video as </b> to download the file.</li>           
+            </ul>            
+          </div>          
+        </div>
+
+      </div>
+    </div>
+
+    <!-- snackbar-success -->
+    <div id="snackbar-success">Your video is ready to download.</div>
+    <!-- snackbar-success end. -->
+    <!-- snackbar-error -->
+    <div id="snackbar-error">Error retrieving the download link for the url. Please try again later!</div>
+    <!-- snackbar-error end. -->
+    <!-- footer -->
+	<!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-6 col-md-offset-3 col-xs-12">
+        <!-- Detail Text -->
+        <div class="detailtext card">
+            <h2>
+                About Fb Video Downloader
+            </h2>
+          <p>
+Welcome to FBvideodownloader.cc! Facebook video downloader is an online tool that allows everyone to download HD videos from Facebook for free without any limitation. </p>
+<h2>
+   How Facebook Video Download? 
+</h2>
+<p>
+    It's very easy to download videos from facebook. You don't have to download any software or app. Only you have to come here with Facebook video link. And our online facebook downloader tool will convert your link into downloadable video link. 
+</p>
+<h2>Process to download Facebook videos:</h2>
+<p>
+    Follow steps to save facebook videos in Pc. You can also do the same to grab facebook videos on iPhone, Android mobile.
+    <ul>
+        <li>Go to <b>the Facebook video</b> that you want to download</li>
+        <li><b>Copy video location</b> from the address bar. <i>Or</i> Right click on video and click on show video URL. <i>Or</i> In-App, Click on three dots above the video and select copy link option.</li>
+        <li>Now, Go to <a href="https://www.mhcfb.000webhostapp.com"><b>https://www.mhcfb.000webhostapp.com</b></a>. Paste the URL in the above input box and Click on Download button.</li>
+        <li>Wait for a second... It will pop up "<b>Your FB video is ready to download.</b>"</li>
+        <li>Scroll the page. There will be Facebook video download options in HD quality.</li>
+        <li>That's it! Hit on Download to start downloading.</li>
+		<h2>
+   Where are Facebook videos saved after being downloaded? 
+</h2>
+<p>
+When you're downloading files, they are usually saved into whatever folder you have set as your default. Your browser normally sets this folder for you. In browser settings you can change and choose manually the destination folder for your downloded facebook videos.
+</p>
+<h2>
+   Does XXXYZZ store downloaded videos or keep a copy of videos? 
+</h2>
+<p>
+XXXYZZ doesn't store videos. Neither do we keep copies of downloaded videos. All videos are hosted on Facebook's servers. Also, we don't keep track of the download histories of our users, thus making using Getfvid totally anonymous.
+</p>
+<h2>
+   How Facebook Video Download? 
+</h2>
+<p>
+    It's very easy to download videos from facebook. You don't have to download any software or app. Only you have to come here with Facebook video link. And our online facebook downloader tool will convert your link into downloadable video link. 
+</p>
+    </ul>
+</p>
+        </div>
+        <!-- Detail Text. -->
+      </div>
+      <!-- col end.-->
+    </div>
+    <!-- row end.--> 
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Frequent Issue</h4>
+          </div>
+          <div class="modal-body">
+            <h4> URLs look like this: (file: and ftp: URLs are synonymous.)</h4>
+            <ul>
+              <li>https://www.facebook.com/fbusername/videos/52587746952/</li>              
+              <li>https://www.facebook.com/facebookusername/videos/1245456945887/</li>           
+            </ul>
+            <h4> If fb download link is not working</h4>
+            <ul>
+              <li>Click on any link(Download SD/Download HD) for download.</li>              
+              <li>Right click on the video and click on <b>Save Video as </b> to download the file.</li>           
+            </ul>            
+          </div>          
+        </div>
+
+      </div>
+    </div>
+    <div class="footer ">
+	<p>Note: Facebook video downloader is neither affiliated with nor endorsed by Facebook.</p>
+
+      <p>©2019 Facebook Video Downloader</p>
+    </div>
+    <!-- footer end. -->
+
+  </div>
+  <!-- container-fluid end. -->
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+  <script src="js/custom.js"></script>
+
+</body>
+</html>

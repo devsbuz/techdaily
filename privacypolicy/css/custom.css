@@ -1,0 +1,246 @@
+/*----------html----------*/
+html, body {
+    height: 100%;    
+    background: url("../img/a3.jpg") no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*--------navbar--------*/
+.navbar-brand, .navbar-nav > li > a, .navbar-nav > li > p {
+	color : #fff;
+}
+
+.navbar-brand:hover {
+	color: #E65100;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+}
+
+.navbar-toggle { 
+	border: none;
+}
+
+.icon-bar {
+	background-color: white;
+}
+
+/*-----------heading------------*/
+.header {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.header h1 {	
+	font-size: 45px;
+	font-weight: bold;
+	color: white;
+}
+
+.header h2 {	
+	
+	font-size: 25px;
+	color: white;
+}
+
+/*-----------card--------------*/
+.card {
+    background: #fff;
+	min-height: 50px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	position: relative;
+	margin-bottom: 30px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.card .body {
+    font-size: 14px;
+    color: #555;
+    padding: 20px;
+}
+
+.card:hover{
+	box-shadow: 0.5em 0.5em 1.2em rgba(0, 0, 0, 0.2);
+}
+
+/*-----------button color-----------*/
+.btn-color {
+	background-color: #3b5998;
+	color: white;
+	padding: 7px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-color : #3b5998;
+}
+
+.btn-color:hover, .btn-color:focus {	
+	background-color: #8b9dc3;
+	border-color : #8b9dc3;
+	color: #fff;
+}
+
+/*-----------advertisment--------------*/
+.advertisement {
+	height:90px;
+	width: 100%;
+	display: inline-block;
+}
+
+.advertisement p{
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*-----------video download link result-----------*/
+.result{
+	display: none;
+}
+
+.result video {
+	width: 100%;
+}
+
+#source, #title {
+	word-break: break-all;
+	line-height: 1.5;
+}
+
+/*---------snackbar-----------*/
+#snackbar-success {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar-success.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar-error {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #F44336;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 40%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar-error.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/*------------footer-----------*/
+.footer {    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;      
+}
+
+/*--------keyframes---------*/
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+/*---------media quries----------*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	
+	#videodownload {
+		margin-top: 10px;
+	}
+
+	#snackbar-success {		
+		font-size: 12px;
+	}
+
+	#snackbar-error {
+		left: 39%;		
+		font-size: 12px;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+	
+	#snackbar-success {		
+		font-size: 12px;
+	}
+
+	#snackbar-error {
+		left: 34%;		
+		font-size: 12px;
+	}
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 960px) {
+	
+	#videodownload {
+		margin-top: 10px;
+	}
+
+	
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  	
+  	#snackbar-success {
+		left:48%;
+	}
+
+	#snackbar-error {
+		left:37%;
+	}
+}

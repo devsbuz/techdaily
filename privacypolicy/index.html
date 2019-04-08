@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+	<title>Facebook video downloader</title>
+	<!-- Change these meta tags according to your description and keywords -->
+	<meta name="Description" content="Download your facebook video by just video url, you can download video in HD or SD format">
+	<meta name="Keywords" content="Facebook video, Download video, Download Facbook video">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Latest compiled and minified font awesome CSS -->
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <!-- custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/custom.css">  
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <!-- container-fluid -->
+    <div class="container-fluid">
+      <!-- navbar-header -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="https://www.techdailymag.com/">Fb Video Downloader</a>
+      </div>
+      <!-- navbar-header end. -->
+      <!-- navbar-collapse -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <!-- navbar-nav -->      
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Trigger the modal with a button -->
+          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">Issue</a></li>
+		  <li><a href="https://www.techdailymag.com/privacypolicy">Privacy</a></li>
+          <li><a href="https://www.techdailymag.com/TermsOfUse" target="_blank">Terms Of Use</a></li>
+		   <li><a href="https://www.techdailymag.com/About" target="_blank">About</a></li>
+			<li><a href="https://www.techdailymag.com/Contact" target="_blank">Contact us</a></li>
+
+          <li><p class="navbar-text">Follow us</p></li>                  
+          <li><a href="#" class="fa fa-facebook"></a></li>
+          <li><a href="#" class="fa fa-twitter"></a></li>
+          <li><a href="#" class="fa fa-google"></a></li>
+          <li><a href="#" class="fa fa-linkedin"></a></li>
+          <li><a href="#" class="fa fa-youtube-play"></a></li>
+        </ul>
+        <!-- navbar-nav end. -->
+      </div>
+      <!-- navbar-collapse end. -->
+    </div>
+    <!-- container-fluid end. -->
+  </nav>
+  <!-- nvabar end. -->
+
+  <!-- container-fluid -->
+  <div class="container-fluid">
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-8 col-md-offset-2">
+        <!-- header -->
+        <div class="header text-center">
+          <h1>Fb Video Downloader</h1>
+          <h2>Just enter your video URL to download</h2>
+        </div>
+        <!-- header end. -->
+      </div>
+      <!-- col end. -->          
+    </div>
+    <!-- row end.--> 
+
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-8 col-md-offset-2">
+        <!-- card -->
+        <div class="card">
+          <!-- body -->
+          <div class="body">
+            <!-- row -->
+            <div class="row" >
+              <!-- col -->
+              <div class="col-md-9">         
+                  <input id="url" class="form-control" type="text" placeholder="Please enter the facebook URL to download">                  
+              </div>
+              <div class="col-md-3"> 
+                  <button id="videodownload" class="btn btn-block btn-color" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing">Download</button>             
+              </div>
+              <!-- col end. -->
+            </div>
+            <!-- row end.-->
+          </div>
+          <!-- body end. -->
+        </div>
+        <!-- card end. --> 
+      </div>
+      <!-- col end.--> 
+    </div>
+    <!-- row end.-->
+
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
+        <!-- advertisement -->
+        <div class="advertisement card">
+          <p>Google Advertisement</p>
+        </div>
+        <!-- advertisement end. -->
+      </div>
+      <!-- col end.-->
+    </div>
+    <!-- row end.--> 
+
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-8 col-md-offset-2">
+        <!-- result -->
+        <div class="result">
+          <!-- card -->
+          <div class="card">
+            <!-- body -->
+            <div class="body">
+              <!-- row -->
+              <div class="row">
+                <!-- col -->
+                <div class="col-md-6">
+                  <!-- video -->
+                  <video id="video" height="240" autoplay="autoplay" loop="loop" muted="muted" controls>
+                    <source src="movie.mp4" type="video/mp4" >
+                    Your browser does not support the video tag.
+                  </video>
+                  <!-- video end.-->
+                </div>
+                <div class="col-md-6">
+                  <h4 id="title"></h4>                    
+                  <h5 id="source"></h5>
+                  <!-- form-group -->
+                  <div class="form-group">
+                    <div id="sd"></div>             
+                  </div>
+                  <div class="form-group">
+                    <div id="hd"></div>             
+                  </div>
+                  <!-- form-group end. -->                 
+                </div>
+                <!-- col end. -->
+              </div>
+              <!-- row -->
+            </div>
+            <!-- body end. -->
+          </div>
+          <!-- card end. -->
+        </div>
+        <!-- result end. -->
+      </div>
+      <!-- col end. -->
+    </div>
+    <!-- row end.-->
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Frequent Issue</h4>
+          </div>
+          <div class="modal-body">
+            <h4> URLs look like this: (file: and ftp: URLs are synonymous.)</h4>
+            <ul>
+              <li>https://www.facebook.com/rapidminer/videos/642000499331862/</li>              
+              <li>https://www.facebook.com/beyounick182/videos/1960700404198396/</li>           
+            </ul>
+            <h4> If download link is not working</h4>
+            <ul>
+              <li>Click on any link(Download SD/Download HD) for download.</li>              
+              <li>Right click on the video and click on <b>Save Video as </b> to download the file.</li>           
+            </ul>            
+          </div>          
+        </div>
+
+      </div>
+    </div>
+
+    <!-- snackbar-success -->
+    <div id="snackbar-success">Your video is ready to download.</div>
+    <!-- snackbar-success end. -->
+    <!-- snackbar-error -->
+    <div id="snackbar-error">Error retrieving the download link for the url. Please try again later!</div>
+    <!-- snackbar-error end. -->
+    <!-- footer -->
+	<!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-6 col-md-offset-3 col-xs-12">
+        <!-- Detail Text -->
+        <div class="detailtext card">
+            <h2>Privacy Policy</h2>
+At <a href="https://www.mhcfb.000webhostapp.com/" rel="noopener">mhcfb.000webhostapp.com</a>, we recognize that the privacy of your personal information is important. This article will inform you about the various types of personal information we receive and collect when you use and visit <a href="https://www.mhcfb.000webhostapp.com/">mhcfb.000webhostapp.com</a>, and how we safeguard your information. We never sell or otherwise your personal information to third parties.
+<h3>Use of Log Files</h3>
+As with most other websites, we collect and use the data contained in log files. The information in the log files include your IP (internet protocol) address, your ISP (internet service provider, such as AOL or Shaw Cable), the type of browser you used to visit our site (such as Google Chrome, Internet Explorer or Mozilla Firefox), the time at which you visited our site and which pages you visited throughout our site.
+<h3>Use of Cookies and Web Beacons</h3>
+We do not store any cookies on your computer.
+<h3>External Advertising Partners</h3>
+We also use third-party advertising services to display advertisements on <a href="https://www.mhcfb.000webhostapp.com/" rel="noopener">mhcfb.000webhostapp.com</a>, such as Google through the Google AdSense program. Some or all of those advertising services may use technology such as cookies and web beacons when they advertise on our site, which will send these advertisers information about your visit including your IP address, your ISP, the browser you used to visit our site, and in some cases, whether you have Flash installed. This is generally used for geotargeting purposes. Geo-targeting is sometimes used for the purposes of matching advertisements with visitors based on certain attributes that visitor has. An example of this type of geo-targeting would be showing Idaho movie theatre ads to someone located in Idaho, or showing certain ads based on specific sites visited, such as showing cooking ads to someone who frequents cooking sites.<br/>
+<h3>DoubleClick DART cookies</h3>
+We also may use DART cookies for ad serving through Google’s DoubleClick service, which places a cookie on your computer when you are browsing the web and visit a site using DoubleClick advertising (including some Google AdSense advertisements). This cookie is used to serve ads specific to you and your interests (”interest based targeting”). The ads served will be targeted based on your previous browsing history (For example, if you have been viewing sites about visiting Miami, you may see Miami hotel advertisements when viewing a non-related site, such as on a site about hockey). DART uses “non personally identifiable information”. It does NOT track personal information about you, such as your name, email address, physical address, telephone number, social security numbers, bank account numbers or credit card numbers. You can opt-out of this ad serving on all sites using this advertising by visiting <a href="http://www.doubleclick.com/privacy/dart_adserving.aspx">http://www.doubleclick.com/privacy/dart_adserving.aspx</a><br/>
+
+You may choose to disable or selectively turn off our cookies or third-party cookies in your browser settings, or by managing preferences in programs such as Norton Internet Security. However, this can affect how you are able to interact with our site as well as other websites. This could include the inability to login to services or programs, such as logging into forums or accounts.<br/>
+
+Deleting cookies does not mean you are permanently opted out of any advertising program. Unless you have settings that disallow cookies, the next time you visit a site running the advertisements, a new cookie will be added.<br/><br/>
+
+You can contact us on <a href="https://www.facebook.com/fbvideodownloader" target="_blank">Facebook</a>
+<br/>
+        </div>
+        <!-- Detail Text. -->
+      </div>
+      <!-- col end.-->
+    </div>
+    <!-- row end.--> 
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Frequent Issue</h4>
+          </div>
+          <div class="modal-body">
+            <h4> URLs look like this: (file: and ftp: URLs are synonymous.)</h4>
+            <ul>
+              <li>https://www.facebook.com/fbusername/videos/52587746952/</li>              
+              <li>https://www.facebook.com/facebookusername/videos/1245456945887/</li>           
+            </ul>
+            <h4> If fb download link is not working</h4>
+            <ul>
+              <li>Click on any link(Download SD/Download HD) for download.</li>              
+              <li>Right click on the video and click on <b>Save Video as </b> to download the file.</li>           
+            </ul>            
+          </div>          
+        </div>
+
+      </div>
+    </div>
+    <div class="footer ">
+	<p>Note: Facebook video downloader is neither affiliated with nor endorsed by Facebook.</p>
+
+      <p>©2019 Facebook Video Downloader</p>
+    </div>
+    <!-- footer end. -->
+
+  </div>
+  <!-- container-fluid end. -->
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+  <script src="js/custom.js"></script>
+
+</body>
+</html>
